@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: rickyjuiceshop 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: rickyjuiceshop 
+    spec:
+      containers:
+        - name: rickyjuiceshop 
+          image: juice.azurecr.io/rickyjuiceshop
+          ports:
+          - containerPort: 3000
